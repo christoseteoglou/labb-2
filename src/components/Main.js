@@ -1,31 +1,31 @@
 import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
+import { mainLayout, title } from '../styles/mainLayout.module.css';
 
 const Main = () => {
 	return (
 		<StaticQuery
 			query={graphql`
-				query MyEducationQuery {
-					allContentfulEducation {
+				query MyLetter {
+					allContentfulPersonalLetter {
 						nodes {
-							education
-							date
-							school
 							id
+							userPersonal {
+								userPersonal
+							}
 						}
 					}
 				}
 			`}
 			render={(data) => (
-				<div>
-					{data.allContentfulEducation.nodes.map((node, id) => (
+				<section className={mainLayout}>
+					{data.allContentfulPersonalLetter.nodes.map((node, id) => (
 						<div key={id}>
-							<h2>{node.education}</h2>
-							<h4>{node.school}</h4>
-							<h4>{node.date}</h4>
+							<h1 className={title}>Personal Letter</h1>
+							<p>{node.userPersonal.userPersonal} </p>
 						</div>
 					))}
-				</div>
+				</section>
 			)}
 		/>
 	);

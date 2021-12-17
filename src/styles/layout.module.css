@@ -1,0 +1,23 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.container {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Roboto", sans-serif;
+	padding-left: 3em;
+	padding-top: 3em;
+	padding-bottom: 3em;
+}
+
+.h2text {
+	font-size: 3em;
+}
+
+.paragraph {
+	line-height: 20px;
+}

@@ -1,0 +1,21 @@
+.container {
+	margin-top: 2em;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	padding-left: 3em;
+	padding-top: 3em;
+	padding-bottom: 3em;
+	align-self: center;
+}
+
+.paragraphStyle {
+	font-size: 1em;
+	font-weight: 700;
+	color: black;
+	padding-bottom: 1em;
+}
+
+.title {
+	font-size: 2em;
+}

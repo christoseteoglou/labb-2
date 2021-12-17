@@ -9,21 +9,17 @@ html {
 }
 
 :root {
-	--clr-dark: #00171f;
-	--clr-main: #8b56e3;
-	--clr-light: #fff;
-
 	--font-type: "Roboto", sans-serif;
 	--font-light: 300;
 	--font-regular: 400;
 	--font-bold: 700;
 }
 
-.bg-dark {
-	background-color: var(--clr-dark);
-}
-
 .text {
 	font-family: var(--font-type);
 	color: var(--clr-dark);
+}
+
+.background {
+	background-color: red;
 }

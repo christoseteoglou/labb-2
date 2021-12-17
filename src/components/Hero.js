@@ -1,6 +1,6 @@
 import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
-import * as generalStyles from '../styles/generalStyles.module.css';
+import { container, h2text, paragraph } from '../styles/layout.module.css';
 
 const Hero = () => {
 	return (
@@ -29,13 +29,13 @@ const Hero = () => {
 				}
 			`}
 			render={(data) => (
-				<section className={generalStyles.text}>
+				<section className={container}>
 					{data.allContentfulContactInformation.nodes.map((node, id) => (
 						<div key={id}>
 							<img src={node.userLogo.file.url} alt="Red Panda with a christmas hat" />
-							<h2>{node.userName}</h2>
-							<h4>{node.email}</h4>
-							<h4>{node.website}</h4>
+							<h2 className={h2text}>{node.userName}</h2>
+							<p className={paragraph}>{node.email}</p>
+							<p className={paragraph}>{node.website}</p>
 						</div>
 					))}
 				</section>
